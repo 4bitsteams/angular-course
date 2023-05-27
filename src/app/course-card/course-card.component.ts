@@ -7,10 +7,12 @@ import { Course } from '../model/course';
 })
 export class CourseCardComponent implements OnInit {
 
+  todate=new Date(2023,0,1);
 @Input() course!:Course;
 @Input() cardIndex:number=0;
 
 @Output('courseSelected')
+
 courseSelected=new EventEmitter<Course>();
   constructor(){
   }
