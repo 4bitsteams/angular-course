@@ -7,11 +7,13 @@ import { Course } from './model/course';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  a=COURSES[0];
-  b=COURSES[1];
-  c=COURSES[2];
-  d=COURSES[3];
-  e=COURSES[4];
+  //a=COURSES[0];
+  //b=COURSES[1];
+  //c=COURSES[2];
+  //d=COURSES[3];
+  //e=COURSES[4];
+
+  courses=COURSES;
 
   data={
     title :'angular-course'

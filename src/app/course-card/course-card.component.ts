@@ -8,8 +8,9 @@ import { Course } from '../model/course';
 export class CourseCardComponent implements OnInit {
 
 @Input() course!:Course;
+@Input() cardIndex:number=0;
 
-@Output()
+@Output('courseSelected')
 courseSelected=new EventEmitter<Course>();
   constructor(){
   }
@@ -21,6 +22,10 @@ courseSelected=new EventEmitter<Course>();
   OnViewImage(){
     console.log("Chield Selected");
     this.courseSelected.emit(this.course);
+  }
+
+  isValidCourse(){
+    return this.course && this.course.id==1;
   }
 
 }

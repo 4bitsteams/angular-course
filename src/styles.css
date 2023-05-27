@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+app-course-card.is-first{
+    border-top: 2px solid green;
+    padding-top: 20px;
+}
+
+app-course-card.is-last{
+    border-top: 2px solid red;
+    padding-top: 20px;
+
+}
+
+app-course-card.is-even{
+    border-top: 5px solid yellow;
+    padding-top: 40px;
+
+}
+
+
+app-course-card.is-odd{
+    border-top: 5px solid orangered;
+    padding-top: 40px;
+
+}

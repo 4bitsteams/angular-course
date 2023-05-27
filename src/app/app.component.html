@@ -389,13 +389,22 @@
   <!-- Next Steps -->
   <div id="_rubel" (click)="onLogoClick()">Hello</div>
 
-  <app-course-card (click)="OnClickEvent()" [course]="a"></app-course-card>
+  <!-- <app-course-card (click)="OnClickEvent()" [course]="a"></app-course-card> -->
 
-  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="b"></app-course-card>
+  <app-course-card *ngFor="let course of courses; index as i; 
+  first as isFirst; 
+  last as isLast;
+   even as isEvent;
+   odd as isOdd;" 
+  [class.is-first]="isFirst"
+  [class.is-last]="isLast"
+  [class.is-even]="isEvent"
+  [class.is-odd]="isOdd"
+  (courseSelected)="onCourseSelected($event)" [course]="course" [cardIndex]="i + 1"></app-course-card>
 
-  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="c"></app-course-card>
+  <!-- <app-course-card (courseSelected)="onCourseSelected($event)" [course]="c"></app-course-card>
 
-  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="d"></app-course-card>
+  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="d"></app-course-card> -->
 
   <div>
     <input class="Demo" (keyup)="onKeyUp(inputRef.value)" [value]="data.title" #inputRef>
