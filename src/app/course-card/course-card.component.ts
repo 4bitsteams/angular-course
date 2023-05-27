@@ -29,10 +29,15 @@ courseSelected=new EventEmitter<Course>();
   }
 
   cardClasses() {
-    if(this.course.id==1){
-      return 'btn btn-warning';
-    }
-    return '';
+     let outVar='';
+      if(this.course.id==1){
+        outVar= 'btn btn-warning';
+      }
+      return outVar;
+  }
+
+  styleUnderline(){
+    return "{'text-decoration':'underline'}";
   }
 
 }
