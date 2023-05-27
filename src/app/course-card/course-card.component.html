@@ -5,11 +5,11 @@
     </h1>
 
     <div *ngIf="isValidCourse(); else noone">
-         <h1>Hello</h1>
+         <h1 [style.text-decoration]="'underline'">Hello</h1>
     </div>
 
     <ng-template #noone>
-        <h1>No Hello</h1>
+        <h1 [style]="styleUnderline()">No Hello</h1>
     </ng-template>
 
     <h1>
