@@ -341,7 +341,7 @@
       </g>
     </svg>
 
-    <span>{{ title }} app is running!</span>
+    <span>{{ data.title }} app is running!</span>
 
     <svg id="rocket-smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632">
       <title>Rocket Ship Smoke</title>
@@ -387,6 +387,19 @@
   </div>
 
   <!-- Next Steps -->
+  <div id="_rubel" (click)="onLogoClick()">Hello</div>
+
+  <app-course-card (click)="OnClickEvent()" [course]="a"></app-course-card>
+
+  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="b"></app-course-card>
+
+  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="c"></app-course-card>
+
+  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="d"></app-course-card>
+
+  <div>
+    <input class="Demo" (keyup)="onKeyUp(inputRef.value)" [value]="data.title" #inputRef>
+  </div>
   <h2>Next Steps</h2>
   <p>What do you want to do next with your app?</p>
 
