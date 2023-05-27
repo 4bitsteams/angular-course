@@ -1,5 +1,5 @@
 
-<div id="courseId" class="card-container">
+<div id="courseId" class="card-container" *ngIf="course">
     <h1>
         course-card works! {{course.id + ' ' +cardIndex}} {{course.description}}
     </h1>
@@ -15,9 +15,10 @@
     <h1>
         course-card works! {{course.id+ ' ' +cardIndex}} {{course.description}}
     </h1>
-</div>
 
-<button type="button" class="btn btn-primary" (click)="OnViewImage()">
+<button type="button" class="btn btn-primary" (click)="OnViewImage()" [class]="cardClasses()">
     View Course
 </button>
+
+</div>
 

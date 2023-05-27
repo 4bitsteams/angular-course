@@ -28,4 +28,11 @@ courseSelected=new EventEmitter<Course>();
     return this.course && this.course.id==1;
   }
 
+  cardClasses() {
+    if(this.course.id==1){
+      return 'btn btn-warning';
+    }
+    return '';
+  }
+
 }
