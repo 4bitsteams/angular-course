@@ -346,8 +346,12 @@
 
    
 
-    <!-- <img src="{{imageSrc}}" alt=""> -->
+    <img src="{{imageSrc}}" alt="">
+
+    <img [src]="imageSrc" alt="">
     <span>{{getTitle()}} {{ data.title }} app is running!</span>
+
+    <span>[abcd]= "data.title"  app is running!</span>
 
     <svg id="rocket-smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632">
       <title>Rocket Ship Smoke</title>
@@ -370,12 +374,22 @@
         <p>{{blogPost.Author}}</p>
   </div>
 
-  
+<div>
 <div>
   <p>{{number}}</p>
   <button (click)="appComponentButtonClick($event)">Click me !</button>
 </div>
+
+
+<div>
+  <input [(ngModel)]="email" type="text">
+  <p>{{email}}</p>
+  <button (click)="onsave()">Save</button>
+</div>
+</div>
   <!-- Resources -->
+
+  
   <h2>Resources</h2>
   <p>Here are some links to help you get started:</p>
 

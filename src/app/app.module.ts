@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { CourseDepartmentComponent } from './course-department/course-department.component';
@@ -15,7 +15,7 @@ import { BlogService } from './blog.service';
     BlogPostComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,FormsModule
   ],
   providers: [BlogService],
   bootstrap: [AppComponent]
