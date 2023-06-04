@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { CourseDepartmentComponent } from './course-department/course-department.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
+import { BlogService } from './blog.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [BlogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

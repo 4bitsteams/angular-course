@@ -364,15 +364,13 @@
     </ul>
   </div>
 
-  <div>
-    <ul>
-      <li *ngFor="let blogPost of blogPosts">
+  <div class="blog-post" *ngFor="let blogPost of blogPosts">
         <h1>{{blogPost.Title}}</h1>
         <p>{{blogPost.Description}}</p>
         <p>{{blogPost.Author}}</p>
-      </li>
-    </ul>
   </div>
+
+  
 <div>
   <p>{{number}}</p>
   <button (click)="appComponentButtonClick($event)">Click me !</button>

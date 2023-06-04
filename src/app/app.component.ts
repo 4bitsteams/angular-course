@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { COURSES } from './db_data';
 import { Course } from './model/course';
+import { BlogService } from './blog.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -22,12 +23,10 @@ export class AppComponent {
   number=1;
   blogs=['blog post 1','blog post 2','blog pot 3','blog post 4','blog post 5'];
 
-  blogPosts=[
-        {Title:'Math',Description:'this book is Very Eeasy to Learn!!!',Author:'Rubel'},
-        {Title:'Math 1',Description:'this book is Very Eeasy to Learn 1 !!!',Author:'Rubel 1'},
-        {Title:'Math 2',Description:'this book is Very Eeasy to Learn 2 !!!',Author:'Rubel 2'}
-  ];
-
+  blogPosts;
+  constructor(service:BlogService){
+    this.blogPosts=service.getBlogPost();
+  }
   getTitle(){
     return this.data.title;
   }
